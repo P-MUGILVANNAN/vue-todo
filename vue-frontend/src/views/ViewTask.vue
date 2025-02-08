@@ -10,7 +10,7 @@ export default {
   },
   methods:{
     getTasks(){
-      axios.get("http://localhost:8080/gettasks")
+      axios.get("https://vue-todo-e10y.onrender.com/gettasks")
       .then(response => {
         const data = response.data;
         this.tasks = data;
@@ -20,7 +20,7 @@ export default {
       })
     },
     deleteTask(taskId){
-      axios.delete(`http://localhost:8080/deletetask/${taskId}`)
+      axios.delete(`https://vue-todo-e10y.onrender.com/deletetask/${taskId}`)
       .then(() => {
         alert('Task deleted successfully');
         this.tasks = this.tasks.filter(task => task._id !== taskId);

@@ -15,7 +15,7 @@ export default {
       this.addTask();
     },
     addTask() {
-      axios.post('http://localhost:8080/createtask', this.task)
+      axios.post('https://vue-todo-e10y.onrender.com/createtask', this.task)
         .then(response => {
           console.log('Task added successfully:', response.data);
           alert("Task added successfully");

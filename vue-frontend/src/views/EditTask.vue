@@ -13,7 +13,7 @@ export default {
     },
     methods: {
         updateTask() {
-            axios.put(`http://localhost:8080/updatetask/${this.id}`, this.updatedTask)
+            axios.put(`https://vue-todo-e10y.onrender.com/updatetask/${this.id}`, this.updatedTask)
                 .then((response) => {
                     console.log('Task updated successfully:', response.data);
                     alert("Task updated successfully");
